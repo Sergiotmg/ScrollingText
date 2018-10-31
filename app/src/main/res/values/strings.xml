@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">ScrollingText</string>
     <string name="article_title">Beatles Anthology Vol. 1</string>
     <string name="article_subheading">Behind That Locked Door: Beatles Rarities!</string>
@@ -24,6 +24,9 @@
     <b><i>One After 909</i></b> — A song recorded for the <i>Let It Be</i> album was actually worked on way back in the beginning, six years earlier. This take shows how they did it much more slowly, with an R&amp;B feel to it.
     </string>
     <string name="article_heading" translatable="false">Título Artículo</string>
-    <string name="article" translatable="false">TextView</string>
-    <string name="button" translatable="false">Button</string>
+    <string name="article">TextView</string>
+    <string name="share" tools:ignore="MissingTranslation" translatable="false">Compartir</string>
+    <string name="edit">Editar</string>
+    <string name="delete" translatable="false" tools:ignore="MissingTranslation">Borrar</string>
+
 </resources>

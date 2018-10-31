@@ -8,64 +8,51 @@
 
     <TextView
         android:id="@+id/article_heading"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:autoLink="none|web"
         android:paddingStart="16dp"
         android:paddingLeft="@dimen/paddingLeft"
         android:paddingTop="@dimen/paddingTop"
-
         android:paddingEnd="10dp"
         android:paddingRight="@dimen/paddingRight"
         android:paddingBottom="@dimen/paddingBottom"
+
         android:text="@string/article_title"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="@android:color/background_dark"
+        android:textColor="@android:color/white"
         android:textStyle="bold"
+        tools:background="@color/colorPrimary"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="0dp"
+
+        android:layout_height="417dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:background="@android:color/background_light" />
-
-    <ScrollView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/article_heading"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="1.0">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/article_subheading"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:paddingLeft="16dp"
-                android:paddingTop="10dp"
-                android:paddingRight="16dp"
-                android:paddingBottom="10dp"
-                android:text="@string/article_subheading"
-                android:textColor="@android:color/background_dark"
-                tools:layout_editor_absoluteY="1901dp" />
 
             <TextView
                 android:id="@+id/article"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:autoLink="none|web"
                 android:lineSpacingExtra="5dp"
                 android:text="@string/article_text" />
-
 
             <Button
                 android:id="@+id/button"
@@ -73,7 +60,19 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="mostrarToast"
-                android:text="@string/button" />
+                android:text="Button" />
+
+            <TextView
+                android:id="@+id/article_subheading"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="16dp"
+                android:paddingTop="10dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="10dp"
+                android:text="@string/article_subheading"
+                android:textColor="@android:color/background_dark" />
 
         </LinearLayout>
     </ScrollView>
