@@ -13,14 +13,15 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        //4.3 menu and pickers ejercicio
-        TextView article_text = findViewById(R.id.article);
-        registerForContextMenu(article_text);
-        //############################
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //Toast.makeText(this,"Hola que tal!Me has girado????",Toast.LENGTH_LONG).show();
         // solo para comprobar que al girarse aparece el toast!!!
+        //4.3 menu and pickers ejercicio   N OSE PUEDE HACER FINDVIEW ANTES DE SETCONTENTVIEW
+        TextView article_text = findViewById(R.id.article);
+        registerForContextMenu(article_text);
+        //############################
 
     }
 
