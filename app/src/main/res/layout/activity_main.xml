@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,40 +11,55 @@
         android:id="@+id/article_heading"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:autoLink="none|web"
-        android:paddingStart="16dp"
+
+        android:paddingStart="@dimen/paddingStart"
+        android:paddingEnd="@dimen/paddingEnd"
         android:paddingLeft="@dimen/paddingLeft"
-        android:paddingTop="@dimen/paddingTop"
-        android:paddingEnd="10dp"
         android:paddingRight="@dimen/paddingRight"
+        android:paddingTop="@dimen/paddingTop"
         android:paddingBottom="@dimen/paddingBottom"
 
         android:text="@string/article_title"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
         android:textColor="@android:color/white"
         android:textStyle="bold"
         tools:background="@color/colorPrimary"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
+        tools:ignore="MissingConstraints"
+        />
 
     <ScrollView
         android:id="@+id/scrollView3"
-        android:layout_width="0dp"
-
-        android:layout_height="417dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="116dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintTop_toBottomOf="@+id/article_heading"
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
 
+
+            >
+
+
+            <TextView
+                android:id="@+id/article_subheading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="16dp"
+                android:paddingTop="10dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="10dp"
+                android:text="@string/article_subheading"
+                android:textColor="@android:color/background_dark"
+                tools:layout_editor_absoluteY="50dp" />
 
             <TextView
                 android:id="@+id/article"
@@ -53,26 +69,15 @@
                 android:autoLink="none|web"
                 android:lineSpacingExtra="5dp"
                 android:text="@string/article_text" />
-
             <Button
                 android:id="@+id/button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:onClick="mostrarToast"
-                android:text="Button" />
 
-            <TextView
-                android:id="@+id/article_subheading"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:paddingLeft="16dp"
-                android:paddingTop="10dp"
-                android:paddingRight="16dp"
-                android:paddingBottom="10dp"
-                android:text="@string/article_subheading"
-                android:textColor="@android:color/background_dark" />
+                android:onClick="mostrarToast"
+                android:text="@string/button" />
+
+
 
         </LinearLayout>
     </ScrollView>

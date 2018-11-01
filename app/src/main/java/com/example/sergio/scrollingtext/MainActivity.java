@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void mostrarToast(View view) {
-    Toast.makeText(this,"Hola que tal!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",Toast.LENGTH_LONG).show();//solo info
+    Toast.makeText(this,"Hola que tal!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",Toast.LENGTH_SHORT).show();//solo info
 
     }
 
